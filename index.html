@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Minimal React+Vite(m) App</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+
+    <div id="root">
+        <h3>Simple header in plain HTML</h3>
+        <button type="button" id="button1" onclick="aJavaScriptFunc()">JavaScript</button>
+         <!-- <h1>Implementing a Minimal React App</h1> -->
+
+    </div> 
+    <script src="scripts/index.jsx" type="module"></script>       
+    <!-- IT IS GENERALLY GOOD PRACTICE TO INCLUDE SCRIPTS AT END OF BODY 
+         AS YOU HTML PAGE WILL BE LOADED WHILE JS CAN KEEP RUNNING
+         <script type="module" src="index.js"></script>
+    <script type="module" src="Header.js"></script>
+     -->     
+
+    <script>
+        function aJavaScriptFunc(){
+            var header1 = document.createElement('h3');
+            header1.innerText = 'Hello There. My first JavaScript code';
+            document.getElementById("root").appendChild(header1);
+        }
+    </script> 
+
+     
+    
+    <!-- <script src="Header.js" type="text/babel" ></script>
+    <script src="MainContent.js" type="text/babel" type="module"></script>-->
+        
+    <!-- "text/babel as index.js contains jsx code which can only be transpiled by babel not js. (throws error)"-->
+        
+
+</body>
+</html>
