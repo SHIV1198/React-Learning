@@ -1,0 +1,11 @@
+[plugin:vite:import-analysis] Failed to resolve import "react/jsx-dev-runtime" from "src/index.tsx". Does the file exist?
+Solution: Add an option classic to jsxRuntime of the plugin react in the vite config file.
+
+[vite.config.ts]
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react({
+    jsxRuntime: 'classic' // Add this line
+  })]
+})
+Creating React app from start & adding Vite.Added intial files & changes
