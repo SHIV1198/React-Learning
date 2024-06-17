@@ -11,7 +11,7 @@ root.render(<Page/>);   //can use page() also as it is basically java fn but use
 // //and import it. Eg: do for header.
 function Page() {
     return(
-        <div>
+        <div className="index_div">
             <Header/>
             <MainContent>
                 
